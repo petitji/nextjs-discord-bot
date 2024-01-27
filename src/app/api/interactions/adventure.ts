@@ -1,7 +1,4 @@
-import { RandomPicType } from "@/commands"
 import ky from "ky"
-import { client_email, private_key } from '@/credentials.json';
-import { google } from 'googleapis';
 import { APIEmbed } from "discord-api-types/v10";
 import { Region } from "@/types/regions";
 
