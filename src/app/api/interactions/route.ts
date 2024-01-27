@@ -10,6 +10,7 @@ import {
 } from "discord-api-types/v10"
 import { NextResponse } from "next/server"
 import { getRandomPic } from "./random-pic"
+import { startAdventure } from "./adventure"
 
 /**
  * Use edge runtime which is faster, cheaper, and has no cold-boot.
@@ -126,10 +127,11 @@ export async function POST(request: Request) {
           data: { embeds: [embed] },
         })
 
-      case commands.hello.name:
+      case commands.startAdventure.name:
+        const testEmbed = await startAdventure()
         return NextResponse.json({
           type: InteractionResponseType.ChannelMessageWithSource,
-          data: { content: `hello world` },
+          data: { embeds: [testEmbed] },
         })
 
       default:

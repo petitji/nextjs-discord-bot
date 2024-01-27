@@ -1,7 +1,10 @@
 import { Suspense } from "react"
 import { GlobalCommands } from "./global-commands"
+import { getSheets } from "./api/google-auth";
+import { startAdventure } from "./api/interactions/adventure";
 
 export default async function Page() {
+  await startAdventure();
   return (
     <main className="container mx-auto px-3 py-6">
       <section className="grid grid-cols-1 gap-2">

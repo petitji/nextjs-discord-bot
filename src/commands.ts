@@ -54,9 +54,9 @@ export const RANDOM_PIC_COMMAND = {
   ],
 } as const
 
-export const HELLO_WORLD_COMMAND = {
-  name: "안녕",
-  description: "안녕하세요",
+export const START_ADVENTURE_COMMAND = {
+  name: "조사시작",
+  description: "조사를 시작하는 커맨드입니다",
 } as const
 
 export const commands = {
@@ -64,5 +64,5 @@ export const commands = {
   invite: INVITE_COMMAND,
   pokemon: POKEMON_COMMAND,
   randompic: RANDOM_PIC_COMMAND,
-  hello: HELLO_WORLD_COMMAND
+  startAdventure: START_ADVENTURE_COMMAND
 } as const
