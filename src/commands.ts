@@ -54,9 +54,15 @@ export const RANDOM_PIC_COMMAND = {
   ],
 } as const
 
+export const HELLO_WORLD_COMMAND = {
+  name: "안녕",
+  description: "안녕하세요",
+} as const
+
 export const commands = {
   ping: PING_COMMAND,
   invite: INVITE_COMMAND,
   pokemon: POKEMON_COMMAND,
   randompic: RANDOM_PIC_COMMAND,
+  hello: HELLO_WORLD_COMMAND
 } as const

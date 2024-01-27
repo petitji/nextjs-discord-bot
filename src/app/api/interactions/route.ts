@@ -126,6 +126,12 @@ export async function POST(request: Request) {
           data: { embeds: [embed] },
         })
 
+      case commands.hello.name:
+        return NextResponse.json({
+          type: InteractionResponseType.ChannelMessageWithSource,
+          data: { content: `hello world` },
+        })
+
       default:
       // Pass through, return error at end of function
     }
